@@ -1,4 +1,4 @@
-# AITI-KACE Task Manager Assessment | December 5, 2023
+# AITI-KACE Task Manager Assessment | November 13, 2024
 
 This is a RESTful APIs backend that leverages on ***Django Rest Framework*** featuring a Postgresql database.
 
