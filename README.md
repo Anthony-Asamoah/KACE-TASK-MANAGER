@@ -2,6 +2,11 @@
 
 This is a RESTful APIs backend that leverages on ***Django Rest Framework*** featuring a Postgresql database.
 
+Features
+- create and manage users
+- create and manage tasks
+- assign tasks to users (assignee gets an email notification)
+
 ---
 ## Table of content
 - Getting Started
