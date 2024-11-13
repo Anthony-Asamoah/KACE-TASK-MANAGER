@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Task Assigned</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .task-detail {
+            margin-bottom: 15px;
+        }
+
+        .task-detail strong {
+            color: #2c3e50;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <h2>New Task Assigned: {{ task.title }}</h2>
+
+    <p class="task-detail"><strong>Description:</strong> {{ task.description }}</p>
+    <p class="task-detail"><strong>Status:</strong> {{ status }}</p>
+    <p class="task-detail"><strong>Priority:</strong> {{ priority }}</p>
+    <p class="task-detail"><strong>Due Date:</strong> {{ due_date|date:"F j, Y" }}</p>
+
+    <p>Please log in to the task management system to view and manage this task.</p>
+
+    <div class="footer">
+        <p>Thank you,</p>
+        <p>Your Task Management Team</p>
+    </div>
+</div>
+</body>
+</html>
