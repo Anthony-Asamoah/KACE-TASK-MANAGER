@@ -3,7 +3,11 @@
 This is a RESTful APIs backend that leverages on ***Django Rest Framework*** featuring a Postgresql database.
 
 ---
+## Table of content
+- Getting Started
+- Api Usage
 
+---
 
 ## Getting Started
 
@@ -57,3 +61,26 @@ python3 manage.py runserver 8000
 ```
 Open http://127.0.0.1:8000 in your browser to view the available endpoints.
 ```
+
+
+## Api Usage
+The Api can be explored in a browser via 'http://127.0.0.1:8000/'.
+This is well documented and secured.
+alternatively you can make manual requests to the server.
+all api information can be found in the browser via the specified url
+
+to make requests;
+1. login
+```
+- make a GET request to http://127.0.0.1:8000/auth/login/
+- extract the csrf token from the response headers and use that in subsequent post requests
+- make a POST request to 'http://127.0.0.1:8000/auth/login' with params: 
+    username: admin 
+    password: <your password>
+```
+2. explore tasks
+```
+- get a list of tasks via GET 'http://127.0.0.1:8000/tasks'
+- create a task via POST 'http://127.0.0.1:8000/tasks'
+```
+3. explore other endpoints in the browser since that is where the docs can be found
